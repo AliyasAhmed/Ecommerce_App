@@ -34,23 +34,23 @@ class Cart extends ChangeNotifier {
   List userCart = [];
 
   // get list of shoes for sale
-  List getShoeList() {
+  List getShoeList() { // used to display available shoes in the shop page.
     return shoeShop;
   }
   // get cart
 
-  List getUserCart() {
+  List getUserCart() { // used to display items in the cart page.
     return userCart;
   }
 
   // add items to cart
-  void addItemToCart(Shoe shoe) {
+  void addItemToCart(Shoe shoe) { // used to add shoes to cart
     userCart.add(shoe);
     notifyListeners();
   }
 
   // remove items from cart
-  void removeItemFromCart(Shoe shoe) {
+  void removeItemFromCart(Shoe shoe) { // used to remove shoes from cart
     userCart.remove(shoe);
     notifyListeners();
   }
